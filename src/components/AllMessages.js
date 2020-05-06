@@ -12,23 +12,20 @@ export const AllMessages = () => {
 		<>
 			<section className="section-messages">
 				<div className="messageContainer">
-					{showMessages
-						.slice(0)
-						.reverse()
-						.map((message) => (
-							<Card key={message._id} className="card-container">
-								<Card.Header className="card-header">
-									ClientNr: {message.author}
-								</Card.Header>
-								<Card.Body>
-									<Card.Text className="card-text">{message.message}</Card.Text>
-									<div className="card-buttons">
-										<EditMessage message={message} />
-										<DeleteMessage message={message} />
-									</div>
-								</Card.Body>
-							</Card>
-						))}
+					{showMessages.map((message) => (
+						<Card key={message._id} className="card-container">
+							<Card.Header className="card-header">
+								ClientNr: {message.author}
+							</Card.Header>
+							<Card.Body>
+								<Card.Text className="card-text">{message.message}</Card.Text>
+								<div className="card-buttons">
+									<EditMessage message={message} />
+									<DeleteMessage message={message} />
+								</div>
+							</Card.Body>
+						</Card>
+					))}
 				</div>
 			</section>
 		</>

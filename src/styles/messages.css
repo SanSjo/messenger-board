@@ -70,3 +70,16 @@
 	margin-bottom: 10px;
 	z-index: 1000;
 }
+
+@media (max-width: 300px) {
+	.card-header {
+		padding-left: 40px;
+	}
+	.card-text {
+		width: 300px;
+		padding-left: 40px;
+	}
+	.delete-button {
+		margin-right: 40px;
+	}
+}

@@ -36,14 +36,15 @@
 	.form-container {
 		display: flex;
 		justify-content: center;
-		left: 90px;
-		width: 200px;
+		left: 0px;
+		width: 400px;
 	}
 
 	.message-container {
 		position: relative;
+		overflow: visible;
 		height: 100%;
 		width: 400px;
-		left: 1px;
+		left: 0px;
 	}
 }
