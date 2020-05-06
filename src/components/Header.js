@@ -16,7 +16,7 @@ export const Header = () => {
 
 	return (
 		<div>
-			<Navbar className="navbar" color="faded" light>
+			<Navbar style={styles.navbar} color="faded" light>
 				<NavbarBrand style={styles.brand} className="mr-auto">
 					Message Board
 				</NavbarBrand>
@@ -41,6 +41,9 @@ export const Header = () => {
 };
 
 const styles = {
+	navbar: {
+		background: '#fff',
+	},
 	brand: {
 		color: '#eb5833',
 	},
