@@ -11,28 +11,28 @@ Redux
 Express
 Mongoose
 
-# Usage
+# Getting started
 
 ## Install required dependencies
 
-$ npm install
-$ npm install react-redux
-\$ npm install @redux.js/toolkit
+- \$ npm install
+- \$ npm install react-redux
+- \$ npm install @redux.js/toolkit
 
 ## Install UI
 
-$ npm install @material-ui/icons/Delete
-$ npm install @material-ui/core/TextField
-\$ npm install reactstrap
+- \$ npm install @material-ui/icons/Delete
+- \$ npm install @material-ui/core/TextField
+- \$ npm install reactstrap
 
 ## npm start
 
-\$ npm start
+- \$ npm start
 
 ## Install dependencies for api
 
-$ cd api 
-$ Then npm install mongoose
-\$ npm start
+- \$ cd api
+- \$ Then npm install mongoose
+- \$ npm start
 
 ### Deployment
