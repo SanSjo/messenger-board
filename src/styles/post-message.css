@@ -1,0 +1,25 @@
+.formContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 70px;
+	margin-top: 20px;
+	background: #fff;
+	width: 400px;
+	border-radius: 16px;
+}
+
+.button {
+	background-color: #eb5833;
+	margin-top: 50px;
+	width: 200px;
+	height: 40px;
+	border-radius: 18px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	color: white;
+	border: none;
+}
+.button:hover {
+	background-color: #ee6745;
+}

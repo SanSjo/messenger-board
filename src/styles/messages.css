@@ -1,0 +1,72 @@
+.section-messages {
+	height: 400px;
+}
+
+.messageContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	border: none;
+}
+
+.card-container {
+	width: 400px;
+	box-shadow: 2px 2px 4px grey;
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.card-header {
+	background: #f0c87f;
+	color: #eb5833;
+}
+
+.card-text {
+	color: #eb5833;
+}
+
+.card-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+/* Delete button */
+
+.delete-button {
+	color: #eb5833;
+	background-color: transparent;
+	border: none;
+}
+
+.delete-button:hover {
+	color: #f0c87f;
+}
+
+/* Edit button */
+
+.edit-button {
+	color: #eb5833;
+	background: transparent;
+	border: none;
+	padding-top: 5px;
+}
+
+.edit-button:hover {
+	color: #f0c87f;
+}
+
+.edit-input {
+	opacity: 0;
+}
+
+.edit-input:hover {
+	opacity: 1;
+}
+
+.edit-icon {
+	margin-bottom: 10px;
+	z-index: 1000;
+}
