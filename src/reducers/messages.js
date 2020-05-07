@@ -8,25 +8,19 @@ export const messages = createSlice({
 	},
 	reducers: {
 		addMessage: (state, action) => {
-			console.log(action);
 			state = action.payload;
 			state.error = action.payload;
 		},
 		showMessages: (state, action) => {
-			console.log(state);
 			state.messages = action.payload;
 		},
 		editMessage: (state, action) => {
-			console.log(action);
 			const existingMessage = state.messages.find(
 				(message) => message._id === action.payload._id
 			);
-			console.log(existingMessage);
-			console.log(state.messages);
 			existingMessage.message = action.payload.message;
 		},
 		deleteMessage: (state, action) => {
-			console.log(state);
 			state.messages = state.messages.filter(
 				(message) => message._id !== action.payload
 			);
@@ -35,7 +29,6 @@ export const messages = createSlice({
 });
 
 export const postMessages = (author, message) => {
-	console.log(message);
 	return (dispatch) => {
 		fetch('http://localhost:8080/messages', {
 			method: 'POST',

@@ -1,5 +1,5 @@
 .section-messages {
-	height: 400px;
+	background: #f2eeeb;
 }
 
 .messageContainer {
@@ -9,6 +9,24 @@
 	align-items: center;
 	width: 100%;
 	border: none;
+	margin-bottom: 30px;
+}
+
+.msg-header-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background: white;
+	width: 40%;
+	height: 50px;
+	margin-top: 20px;
+	background-color: #f2eeeb;
+	color: #eb5833;
+	border-bottom: 1px solid lightgrey;
+}
+
+.msg-header {
+	font-size: 18px;
 }
 
 .card-container {

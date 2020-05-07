@@ -23,10 +23,14 @@ export const PostMessage = (event) => {
 		<>
 			<form onSubmit={handleformSubmit} className="form">
 				<div className="formContainer">
+					<label className="form-header">
+						Please type in your client number and your message below
+					</label>
 					<label>
 						<TextField
 							id="standard-multiline-static"
 							label="Your clientnumber..."
+							className="form-input"
 							multiline="true"
 							required={true}
 							rows={1}
@@ -38,6 +42,7 @@ export const PostMessage = (event) => {
 						<TextField
 							id="standard-multiline"
 							label="Your message..."
+							className="form-input"
 							multiline="true"
 							required={true}
 							rows={4}
@@ -46,9 +51,12 @@ export const PostMessage = (event) => {
 						/>
 					</label>
 
-					<button className="button" variant="contained">
+					<button type="submit" className="button" variant="contained">
 						Send Message
 					</button>
+				</div>
+				<div className="msg-header-container">
+					<h3 className="msg-header"> - MESSAGES - </h3>
 				</div>
 			</form>
 		</>
