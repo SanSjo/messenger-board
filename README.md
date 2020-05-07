@@ -22,11 +22,16 @@ Install dependencies and UI with
 - `npm install @material-ui/core`
 - `npm install reactstrap`
 
-Run `npm start`. Open http://localhost:3000 to view it in the browser.
+Start the project with `npm start`. Open http://localhost:3000 to view it in the browser.
 
 ## Install dependencies for backend
 
-Install dependencies with `npm install`, `npm install mongoose` and `npm install cors`, then start the server by running `npm start`
+Install dependencies with 
+- `npm install`
+- `npm install mongoose`
+- `npm install cors`.
+
+Start the server by running `npm start`
 
 
 ### Deployment
