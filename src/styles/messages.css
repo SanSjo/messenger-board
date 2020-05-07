@@ -38,11 +38,14 @@
 
 .card-header {
 	color: #eb5833;
-	background: lightgrey;
+	background: rgb(236, 235, 235);
+	font-weight: 500;
+	font-size: 20px;
 }
 
 .card-text {
 	color: #eb5833;
+	font-size: 18px;
 }
 
 .card-buttons {

@@ -29,7 +29,7 @@ export const PostMessage = (event) => {
 					<label>
 						<TextField
 							id="standard-multiline-static"
-							label="Your clientnumber..."
+							label="Your client number..."
 							className="form-input"
 							multiline="true"
 							required={true}

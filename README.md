@@ -13,26 +13,22 @@ Mongoose
 
 # Getting started
 
-## Install required dependencies
+## Install required dependencies for frontend
 
-- \$ npm install
-- \$ npm install react-redux
-- \$ npm install @redux.js/toolkit
+Install dependencies with `npm install`, `npm install react-redux` and `npm install @redux.js/toolkit`.
 
 ## Install UI
 
-- \$ npm install @material-ui/icons/Delete
-- \$ npm install @material-ui/core/TextField
-- \$ npm install reactstrap
+Install UI material with `npm install @material-ui/core` and reactstrap with `npm install reactstrap` .
 
 ## npm start
 
-- \$ npm start
+Then start the server by running `npm start`
 
-## Install dependencies for api
+## Install dependencies for backend
 
-- \$ cd api
-- \$ Then npm install mongoose
-- \$ npm start
+Install dependencies with `npm install` and `npm mongoose`, then start the server by running `npm start`
 
 ### Deployment
+
+https://susanna-message-board.netlify.app/
