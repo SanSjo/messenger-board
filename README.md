@@ -2,7 +2,7 @@
 
 This is a message board where the client can create a message and see all the messages available, and also edit and delete a message.
 
-The app is build in React Redux and built with a mock-api in Express with MongoDB and mongoose.
+The app is build in React Redux with a mock-api in Express with MongoDB and mongoose.
 
 ## Technologies
 

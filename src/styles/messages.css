@@ -19,8 +19,8 @@
 }
 
 .card-header {
-	background: #f0c87f;
 	color: #eb5833;
+	background: lightgrey;
 }
 
 .card-text {
