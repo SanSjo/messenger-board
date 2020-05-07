@@ -73,12 +73,6 @@ export const fetchMessages = () => {
 			.then((json) => {
 				console.log(json);
 				dispatch(messages.actions.showMessages(json));
-			})
-			.catch((err) => {
-				console.log('Error', err);
-				dispatch(
-					messages.actions.showMessage({ error: 'Can not get new messages' })
-				);
 			});
 	};
 };
