@@ -1,3 +1,5 @@
+/* CSS for the PostMessages */
+
 .form {
 	display: flex;
 	flex-direction: column;
@@ -17,11 +19,12 @@
 
 .form-header {
 	color: rgb(63, 62, 62);
-	width: 300px;
+	width: 350px;
 	text-align: center;
 	margin: 30px;
 	padding: 10px;
 	border-bottom: 1px solid lightgray;
+	font-size: 20px;
 }
 
 .form-input {
@@ -43,6 +46,7 @@
 	background-color: #ee6745;
 }
 
+/* Media queries for mobile */
 @media (max-width: 600px) {
 	.formContainer {
 		width: 400px;

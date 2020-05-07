@@ -1,4 +1,4 @@
-/* Css for the messageboard */
+/* CSS for the messageboard */
 
 .body-container {
 	display: flex;
@@ -15,15 +15,13 @@
 }
 
 .message-container {
-	/* position: fixed; */
 	width: 100%;
 	overflow: scroll;
 	height: 600px;
-
 	top: 100;
 }
 
-/* Media queries for mobile devices */
+/* Media queries for mobile  */
 @media (max-width: 600px) {
 	.body-container {
 		flex-direction: column;

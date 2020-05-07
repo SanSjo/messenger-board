@@ -1,3 +1,5 @@
+/* CSS for the AllMessages */
+
 .section-messages {
 	background: #f2eeeb;
 }
@@ -91,6 +93,8 @@
 	margin-bottom: 10px;
 	z-index: 1000;
 }
+
+/* Media queries for mobile */
 
 @media (max-width: 300px) {
 	.card-header {
