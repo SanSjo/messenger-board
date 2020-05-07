@@ -6,6 +6,7 @@ import { Card } from 'react-bootstrap';
 import '../styles/messages.css';
 
 export const AllMessages = () => {
+	// Fetches all the messages from the state with useSelector hook
 	const showMessages = useSelector((state) => state.messages.messages);
 
 	return (

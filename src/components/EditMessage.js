@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { editMessages } from '../reducers/messages';
 import { useDispatch } from 'react-redux';
 import EditIcon from '@material-ui/icons/Edit';
-
 import '../styles/messages.css';
 
 export const EditMessage = (props) => {

@@ -4,24 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-less/semantic.less';
-import { Provider } from 'react-redux';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { messages } from './reducers/messages';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-const reducer = combineReducers({
-	messages: messages.reducer,
-});
-
-const store = configureStore({
-	reducer,
-});
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Provider store={store}>
-			<App />
-		</Provider>
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 );

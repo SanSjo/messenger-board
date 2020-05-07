@@ -13,7 +13,9 @@ export const PostMessage = (event) => {
 
 	const handleformSubmit = (event) => {
 		event.preventDefault();
+		// Creates a new message
 		dispatch(postMessages(author, message));
+		// Prints out the created message
 		dispatch(fetchMessages(author, message));
 		setMessage('');
 		setAuthor('');
