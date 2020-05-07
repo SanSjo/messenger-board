@@ -6,10 +6,10 @@ The app is build in React Redux with a mock-api in Express with MongoDB and mong
 
 ## Technologies
 
-React
-Redux
-Express
-Mongoose
+- React
+- Redux
+- Express
+- Mongoose
 
 # Getting started
 
