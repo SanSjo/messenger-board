@@ -24,7 +24,10 @@ Install dependencies and UI with
 
 Start the project with `npm start`. Open http://localhost:3000 to view it in the browser.
 
+
 ## Install dependencies for backend
+
+Split the terminal and enter `cd backend` 
 
 Install dependencies with 
 - `npm install`
