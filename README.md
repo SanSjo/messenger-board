@@ -18,17 +18,24 @@ The app is build in React Redux with a mock-api in Express with MongoDB and mong
 Install dependencies and UI with 
 - `npm install`
 - `npm install react-redux @reduxjs/toolkit`
-- `npm install @reduxjs/toolkit`.
 
 - `npm install @material-ui/core`
 - `npm install reactstrap`
 
+Start the project with `npm start`. Open http://localhost:3000 to view it in the browser.
 
-Then `npm start`
 
 ## Install dependencies for backend
 
-Install dependencies with `npm install` and `npm mongoose`, then start the server by running `npm start`
+Split the terminal and enter `cd backend` 
+
+Install dependencies with 
+- `npm install`
+- `npm install mongoose`
+- `npm install cors`.
+
+Start the server by running `npm start`
+
 
 ### Deployment
 
