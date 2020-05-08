@@ -39,7 +39,7 @@ app.post('/messages', async (req, res) => {
 	});
 	await message.save();
 
-	res.json(message);
+	res.status(204).json(message);
 });
 
 app.put('/messages/:id', async (req, res) => {

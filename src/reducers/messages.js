@@ -40,16 +40,9 @@ export const postMessages = (author, message) => {
 			statusCode: 204,
 			body: JSON.stringify({ author, message }),
 			headers: { 'Content-Type': 'application/json' },
-		})
-			.then(() => {
-				return dispatch(messages.actions.addMessage(author, message));
-			})
-			.catch((err) => {
-				console.log('Error', err);
-				dispatch(
-					messages.actions.addMessage({ error: 'Can not add new message' })
-				);
-			});
+		}).then(() => {
+			return dispatch(messages.actions.addMessage(author, message));
+		});
 
 		fetch('http://localhost:8080/messages')
 			.then((res) => res.json())
@@ -58,7 +51,7 @@ export const postMessages = (author, message) => {
 			})
 			.catch((err) => {
 				console.log('Error', err);
-				dispatch(
+				return dispatch(
 					messages.actions.showMessage({ error: 'Can not get new messages' })
 				);
 			});
