@@ -4,15 +4,18 @@ export const messages = createSlice({
 	name: 'messages',
 	initialState: {
 		messages: [],
+		error: null,
 	},
 	reducers: {
 		// Reducer to add a new message with POST request
 		addMessage: (state, action) => {
 			state = action.payload;
+			state.error = action.payload;
 		},
 		// Reducer show all messages with GET request
 		showMessages: (state, action) => {
 			state.messages = action.payload;
+			state.error = action.payload;
 		},
 		// Reducer to modify a current message with PUT request
 		editMessage: (state, action) => {
@@ -20,12 +23,14 @@ export const messages = createSlice({
 				(message) => message._id === action.payload._id
 			);
 			existingMessage.message = action.payload.message;
+			state.error = action.payload;
 		},
 		// Reducer to delete a current message with DELETE request
 		deleteMessage: (state, action) => {
 			state.messages = state.messages.filter(
 				(message) => message._id !== action.payload
 			);
+			state.error = action.payload;
 		},
 	},
 });
@@ -33,16 +38,20 @@ export const messages = createSlice({
 // Function that adds a new message with the POST method
 export const postMessages = (author, message) => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/messages', {
+		fetch('http://localhost:9000/messages', {
 			method: 'POST',
 			statusCode: 204,
 			body: JSON.stringify({ author, message }),
 			headers: { 'Content-Type': 'application/json' },
-		}).then(() => {
-			return dispatch(messages.actions.addMessage(author, message));
-		});
+		})
+			.then(() => {
+				return dispatch(messages.actions.addMessage(author, message));
+			})
+			.catch(() => {
+				dispatch(messages.actions.addMessage({ error: 'can not add mesage' }));
+			});
 
-		fetch('http://localhost:8080/messages')
+		fetch('http://localhost:9000/messages')
 			.then((res) => res.json())
 			.then((json) => {
 				dispatch(messages.actions.showMessages(json));
@@ -53,7 +62,7 @@ export const postMessages = (author, message) => {
 // Function that fetches all messages with GET method
 export const fetchMessages = () => {
 	return (dispatch) => {
-		fetch('http://localhost:8080/messages')
+		fetch('http://localhost:9000/messages')
 			.then((res) => res.json())
 			.then((json) => {
 				console.log(json);
@@ -65,7 +74,7 @@ export const fetchMessages = () => {
 // Function to change a current message
 export const editMessages = (message, newValue) => {
 	return (dispatch) => {
-		fetch(`http://localhost:8080/messages/${message._id}`, {
+		fetch(`http://localhost:9000/messages/${message._id}`, {
 			method: 'PUT',
 			statusCode: 204,
 			body: JSON.stringify({ message: newValue }),
@@ -81,7 +90,7 @@ export const editMessages = (message, newValue) => {
 // Function that deletes a current message with DELETE method
 export const deleteMessages = (_id) => {
 	return (dispatch) => {
-		fetch(`http://localhost:8080/messages/${_id}`, {
+		fetch(`http://localhost:9000/messages/${_id}`, {
 			method: 'DELETE',
 			statusCode: 204,
 			body: JSON.stringify({ _id }),

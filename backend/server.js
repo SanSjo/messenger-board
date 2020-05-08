@@ -49,7 +49,7 @@ app.put('/messages/:id', async (req, res) => {
 			message.message = req.body.message;
 		}
 		await message.save();
-		res.status(204).json(message);
+		res.json(message);
 	} catch {
 		res.status(404).json({ error: 'Message does not exist' });
 	}
