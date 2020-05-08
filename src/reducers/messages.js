@@ -4,13 +4,11 @@ export const messages = createSlice({
 	name: 'messages',
 	initialState: {
 		messages: [],
-		error: null,
 	},
 	reducers: {
 		// Reducer to add a new message with POST request
 		addMessage: (state, action) => {
 			state = action.payload;
-			state.error = action.payload;
 		},
 		// Reducer show all messages with GET request
 		showMessages: (state, action) => {
