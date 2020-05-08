@@ -46,12 +46,6 @@ export const postMessages = (author, message) => {
 			.then((res) => res.json())
 			.then((json) => {
 				dispatch(messages.actions.showMessages(json));
-			})
-			.catch((err) => {
-				console.log('Error', err);
-				return dispatch(
-					messages.actions.showMessage({ error: 'Can not get new messages' })
-				);
 			});
 	};
 };
@@ -80,12 +74,6 @@ export const editMessages = (message, newValue) => {
 			.then((res) => res.json())
 			.then((newMessageResult) => {
 				return dispatch(messages.actions.editMessage(newMessageResult));
-			})
-			.catch((err) => {
-				console.log('Error', err);
-				dispatch(
-					messages.actions.editMessage({ error: 'Can not edit messages' })
-				);
 			});
 	};
 };
@@ -98,15 +86,8 @@ export const deleteMessages = (_id) => {
 			statusCode: 204,
 			body: JSON.stringify({ _id }),
 			headers: { 'Content-Type': 'application/json' },
-		})
-			.then(() => {
-				return dispatch(messages.actions.deleteMessage(_id));
-			})
-			.catch((err) => {
-				console.log('Error', err);
-				dispatch(
-					messages.actions.deleteMessage({ error: 'Can not delete messages' })
-				);
-			});
+		}).then(() => {
+			return dispatch(messages.actions.deleteMessage(_id));
+		});
 	};
 };
