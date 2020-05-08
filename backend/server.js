@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 // Start defining your routes here
 app.get('/messages', async (req, res) => {
 	const message = await Message.find();
-	res.send(message);
+	res.json(message);
 });
 
 app.post('/messages', async (req, res) => {
