@@ -18,7 +18,7 @@ export const Header = () => {
 		<div>
 			<Navbar style={styles.navbar} color="faded" light>
 				<NavbarBrand style={styles.brand} className="mr-auto">
-					Message Board
+					Message board
 				</NavbarBrand>
 				<NavbarToggler
 					style={styles.toggler}
