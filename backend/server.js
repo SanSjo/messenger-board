@@ -49,9 +49,9 @@ app.put('/messages/:id', async (req, res) => {
 			message.message = req.body.message;
 		}
 		await message.save();
-		res.json(message);
+		res.status(204).json(message);
 	} catch {
-		res.status(404).json({ error: 'Message doesnt exist' });
+		res.status(404).json({ error: 'Message does not exist' });
 	}
 });
 
@@ -60,7 +60,7 @@ app.delete('/messages/:id', async (req, res) => {
 		await Message.deleteOne({ _id: req.params.id });
 		res.status(204).send();
 	} catch {
-		res.status(404).json({ error: 'Message doesnt exist' });
+		res.status(404).json({ error: 'Message does not exist' });
 	}
 });
 
